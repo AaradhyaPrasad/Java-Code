@@ -17,19 +17,19 @@ public class Main
 	public static void main(String[] args) {
 	    Scanner sc=new Scanner(System.in);
 
-	    SimpleDateFormat formatter=new SimpleDateFormat("yyyy-MM-dd");
-	     String first=sc.next();
+	    SimpleDateFormat formatt=new SimpleDateFormat("yyyy-MM-dd");
+	     String a=sc.next();
 	    int f=sc.nextInt();
-	    String second=sc.next();
-	    int s=sc.nextInt();
+	    String b=sc.next();
+	    int d=sc.nextInt();
 	    Dictionary geek = new Hashtable();
 
         // put() method
-        geek.put(first,f);
-        geek.put(second,s);
+        geek.put(a,f);
+        geek.put(b,d);
 try
-{	    Date d1 = formatter.parse(first);
-			Date d2 = formatter.parse(second);
+{	    Date d1 = formatt.parse(a);
+			Date d2 = formatt.parse(b);
 
 					long diff = d2.getTime() - d1.getTime();
 			long diffDays = diff / (24 * 60 * 60 * 1000);
@@ -68,7 +68,7 @@ try
 
          Date currentDatePlusOne = c.getTime();
 e+=div;
-        System.out.print(formatter.format(currentDatePlusOne)+":"+e);
+        System.out.print(formatt.format(currentDatePlusOne)+":"+e);
         if(i!=diffDays)
         System.out.print(",");
         }
